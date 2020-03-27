@@ -171,12 +171,19 @@ var shippingAddressProp = new paypalProp({
   injection: propTypes.TRANSACTION
 });
 
+var intentProp = new paypalProp({
+  name: 'intent',
+  paypalName: 'intent',
+  type: String,
+  injection: propTypes.PAYMENT
+});
+
 var props = [
 // Button Props
 new paypalProp({ name: 'buttonStyle', paypalName: 'style', injection: propTypes.BUTTON }), new paypalProp({ name: 'braintree', injection: propTypes.BUTTON }), new paypalProp({ name: 'locale', type: String, injection: propTypes.BUTTON }),
 
 // Payment Props
-new paypalProp({ name: 'experience', injection: propTypes.PAYMENT }),
+new paypalProp({ name: 'experience', injection: propTypes.PAYMENT }), intentProp,
 
 // Transaction Props
 new paypalProp({
