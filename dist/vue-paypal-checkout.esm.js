@@ -246,6 +246,7 @@ var script = {
       }
 
       var payment = {
+        intent: 'authorize',
         transactions: [transaction]
       };
 
